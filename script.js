@@ -1,6 +1,5 @@
 /*
 const enabled = document.querySelector("#enabled");
-const status = document.querySelector("#status");
 
 // Restaura a configuração salva.
 chrome.storage.local.get({ enabled: false }, (data) => {
@@ -20,6 +19,7 @@ enabled.addEventListener("change", async () => {
 });*/
 
 const execute = document.querySelector("#execute");
+const cstatus = document.querySelector("#status");
 
 // Detecta caso tenha clique em algum botão
 var botoes = document.querySelectorAll("button");
@@ -31,6 +31,7 @@ for (let i = 0; i < botoes.length; i++) {
 }
 
 function enviar(local) {
+    cstatus.textContent = 'Enviando...';
     fetch(postURL + matricula, {
         method: 'POST',
         headers: {
@@ -42,19 +43,18 @@ function enviar(local) {
     })
         .then(response => {
             if (!response.ok) {
+                cstatus.textContent = 'Erro HTTP: ' + response.status;
                 throw new Error('Erro HTTP: ' + response.status);
             }
 
             return response.json();
         })
         .then(data => {
-            alert('Resposta do servidor:', data.retorno);
             if (data.retorno == 1) {
-                alert("ok");
-                enviando = false;
+                cstatus.textContent = 'Sucesso';
             } else {
-                alert(data.retorno)
+                cstatus.textContent = 'Erro: ' + data.retorno;
             }
         })
-        .catch(error => alert('Erro:' + error));
+        .catch(error => cstatus.textContent = 'Erro: ' + error);
 }
