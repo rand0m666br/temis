@@ -75,6 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Pequeno delay pra carregar o local atual
+    // Isso é pra dar tempo dele pegar a matrícula
     setTimeout(getStatus, 200);
 
     function returnStatus(msg, cor) {
