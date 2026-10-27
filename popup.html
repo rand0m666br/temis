@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Extensão</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <main class="panel">
+        <h2>Painel de controle</h2>
+        <p class="subtitle">Onde Estou</p>
+
+        <label class="setting setting-local">
+            <input type="text" name="local" id="local" class="inputTxt">
+
+            <div class="botoes-local">
+                <button>Fui</button>
+                <button>Voltei</button>
+            </div>
+        </label>
+        <label class="setting">
+            <!-- <span>Ativar funcionalidade</span>
+            <input type="checkbox" id="enabled"> -->
+            <button>WC</button>
+            <button>Almoço</button>
+            <button>Café</button>
+        </label>
+
+        <p id="status">Carregando...</p>
+
+        <!-- <button id="execute">Executar ação</button> -->
+    </main>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
