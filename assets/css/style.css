@@ -31,6 +31,10 @@ h2:hover {
     color: #a1a1aa;
 }
 
+label {
+    color: #a1a1aa;
+}
+
 .setting {
     display: flex;
     justify-content: space-between;
@@ -66,7 +70,7 @@ input[type="checkbox"] {
     flex: 1;
 }
 
-.inputTxt {
+input[type="text"] {
     border: none;
     border-radius: 5px;
     margin-bottom: 5px;
