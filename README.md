@@ -2,6 +2,9 @@
 
 Extensão desenvolvida para complementar o uso painel **Onde Estou**, permitindo que o colaborador atualize sua localização sem ter a necessidade de abrir o painel.
 
+![temis.png](assets/img/temis.png "Têmis")
+
+
 ## Funcionalidades
 
 - **Atualização de localização:** permite atualizar a localização diretamente pela extensão.
