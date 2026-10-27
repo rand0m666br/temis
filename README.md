@@ -17,15 +17,13 @@ Esta extensão é destinada exclusivamente ao **uso interno da empresa** e não 
 
 ## Localização dos arquivos
 
-Os arquivos de instalação estão disponíveis na rede interna da empresa:
-
-`X:\CAMINHO_FICTICIO`
+Os arquivos de instalação estão disponíveis na rede interna da empresa.
 
 É necessário ter acesso à unidade de rede para localizar os arquivos.
 
 ## Instalação no Google Chrome
 
-1. Acesse o caminho da rede interna indicado acima.
+1. Acesse o caminho da rede interna.
 2. Localize a pasta da extensão.
 3. Abra o Google Chrome e acesse `chrome://extensions`.
 4. Ative o **Modo do desenvolvedor**.
@@ -38,10 +36,7 @@ Após a instalação, a extensão ficará disponível no navegador. Recomenda-se
 
 ### Carregamento temporário para teste
 
-1. Acesse o caminho da rede interna:
-
-   `X:\CAMINHO_FICTICIO`
-
+1. Acesse o caminho da rede interna.
 2. Localize a pasta com os arquivos-fonte da extensão, contendo o `manifest.json`.
 3. Abra o Mozilla Firefox.
 4. Digite `about:debugging` na barra de endereços.
