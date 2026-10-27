@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (data.retorno == 1) {
                     returnStatus('Sucesso', '#13fc03');
                     document.getElementById('local').value = '';
+                    getStatus();
                 } else {
                     returnStatus('Erro: ' + data.retorno, 'red')
                 }
