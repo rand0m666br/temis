@@ -1,9 +1,18 @@
+var local = document.getElementById('local');
+
 // Detecta caso tenha clique em algum botão
 var botoes = document.querySelectorAll("button");
 for (let i = 0; i < botoes.length; i++) {
     botoes[i].addEventListener("click", () => {
-        // alert(botoes[i].innerHTML);
-        enviar(botoes[i].innerHTML);
+        var botao = botoes[i].innerHTML;
+        if (botao == 'Fui') {
+            const text = local.value;
+            enviar(text);
+        } else if (botao == 'Voltei') {
+            enviar('TI');
+        } else {
+            enviar(botao);
+        }
     })
 }
 
@@ -29,6 +38,7 @@ function enviar(local) {
         .then(data => {
             if (data.retorno == 1) {
                 returnStatus('Sucesso', '#13fc03');
+                document.getElementById('local').value = '';
             } else {
                 returnStatus('Erro: ' + data.retorno, 'red')
             }
@@ -42,3 +52,11 @@ function returnStatus(msg, cor) {
     cstatus.textContent = msg;
     cstatus.style.color = cor;
 }
+
+// Realiza o envio se apertar Enter
+local.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        enviar(local.value);
+    }
+});
