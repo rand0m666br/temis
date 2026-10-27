@@ -78,7 +78,11 @@ input[type="text"] {
 }
 
 .matricula {
-    width: 150px;
+    width: 100px;
+    color: white;
+    background-color: #171923;
+    font-size: 22px;
+    border: 1px solid white !important;
 }
 
 #status {
