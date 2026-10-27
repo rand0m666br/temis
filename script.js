@@ -31,7 +31,7 @@ for (let i = 0; i < botoes.length; i++) {
 }
 
 function enviar(local) {
-    fetch(postURL, {
+    fetch(postURL + matricula, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
