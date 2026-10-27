@@ -2,6 +2,7 @@
     "manifest_version": 3,
     "name": "Têmis",
     "version": "1.0.0",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr01yuJVlP63566qhnrvY7uIwcJhkYvSPrS7VPPPgkGWTJ2stpaAkkDRNFmAIj7Q0JQ0eXdCw+TX2ZE64PYwC9fCRN2G0EtS6JiGnHlej7LlP3HQnZ4PsB3jipG8XQV7n54jwQfmamm5iub7UFXlKn9dyUAXU7sS4xhm6WM7ouI9lzL9poN8qy3JkBz66CnkQjHMnEpz5/Zg8ty0Pi/mMqDYd9BUdWU0I7ZV5+IF1RcxEpDHOHYGwDMWnEEhzRsBkDadA84c8FMGO4MQAnC0d20U++svhvsc/NyHLcZ7UwJZcARyuHmnDHOLALlsPK0NWqgvcw3DrGWexnqoM41pdTwIDAQAB",
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
