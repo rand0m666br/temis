@@ -19,7 +19,7 @@ for (let i = 0; i < botoes.length; i++) {
 
 function enviar(local) {
     returnStatus('Enviando');
-    fetch(postURL + matricula, {
+    fetch(postURL + matricula.value, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
