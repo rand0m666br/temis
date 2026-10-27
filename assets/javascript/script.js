@@ -60,3 +60,9 @@ local.addEventListener('keydown', function (event) {
         enviar(local.value);
     }
 });
+
+document.querySelector("h2").addEventListener("click", function () {
+    chrome.tabs.create({
+        url: painel
+    });
+})
