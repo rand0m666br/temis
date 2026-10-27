@@ -44,6 +44,7 @@ function enviar(local) {
         .then(response => {
             if (!response.ok) {
                 cstatus.textContent = 'Erro HTTP: ' + response.status;
+                cstatus.style.color = 'red'
                 throw new Error('Erro HTTP: ' + response.status);
             }
 
@@ -52,8 +53,10 @@ function enviar(local) {
         .then(data => {
             if (data.retorno == 1) {
                 cstatus.textContent = 'Sucesso';
+                cstatus.style.color = '#13fc03'
             } else {
                 cstatus.textContent = 'Erro: ' + data.retorno;
+                cstatus.style.color = 'red'
             }
         })
         .catch(error => cstatus.textContent = 'Erro: ' + error);
