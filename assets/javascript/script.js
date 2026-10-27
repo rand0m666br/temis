@@ -1,7 +1,8 @@
 var local = document.getElementById('local');
+var matricula = document.getElementById('matricula');
+var botoes = document.querySelectorAll("button");
 
 // Detecta caso tenha clique em algum botão
-var botoes = document.querySelectorAll("button");
 for (let i = 0; i < botoes.length; i++) {
     botoes[i].addEventListener("click", () => {
         var botao = botoes[i].innerHTML;
@@ -61,8 +62,21 @@ local.addEventListener('keydown', function (event) {
     }
 });
 
+// Redireciona pro painel interno se clicar
 document.querySelector("h2").addEventListener("click", function () {
     chrome.tabs.create({
         url: painel
     });
-})
+});
+
+// Salva a matrícula digitada
+matricula.addEventListener("input", () => {
+    chrome.storage.local.set({
+        matricula: matricula.value
+    });
+});
+
+// Restaura a matrícula salva.
+chrome.storage.local.get({ matricula: "" }, (data) => {
+    matricula.value = data.matricula;
+});

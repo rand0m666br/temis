@@ -77,6 +77,10 @@ input[type="text"] {
     padding: 5px;
 }
 
+.matricula {
+    width: 150px;
+}
+
 #status {
     color: #a78bfa;
 }
